@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ID Card Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div class="back">
+            <form action="">
+                <h3>Please fill your details</h3>
+                <br>
+                
+
+                <label for="fullName">Full Name</label>
+                <input type="text" id="inName" placeholder="Enter your full name">
+                <br>
+
+                <label for="designation">Designation</label>
+                <input type="text" id="inDesignation" placeholder="Designation">
+                <br>
+
+                <label for="employeeNumber">Employee Number</label>
+                <input type="text" id="inNum" placeholder="Employee number?">
+                <br>
+
+                <label for="dateOfIssue">Date issued</label>
+                <input type="date" id="inDate" placeholder="Date issued">
+                <br>
+
+                <label for="image"  class="upload" >Upload an Image</label>
+                <input type="file" id="image" accept="image/*" onchange="loadImage(event)">
+                <br>
+            
+            </form>
+            <!-- 
+            <label for="ContactInfo">Contact Information</label>
+            <h4 id="website">www.learntocode.com</h4>
+            <h4 id="email">info@learntocode.com</h4>
+            <h4 id="phone">+234 706 5274 865</h4>
+            -->
+
+            <button type="submit" id="preview">Preview</button>
+
+            <div class="container">
+                <div class="card" id="result">
+                    <header id="head">
+                        <div class="dept">
+                            <h4>Ligmus360</h4>
+                            <span>Technical</span>
+                        </div>
+                        <img src="ligmusnotext.png" alt="ligmus logo" id="logo">
+                    </header>
+                    <div class="content">
+                        <img src="" alt="uploaded image" id="img">
+                        <ul>
+                            <li id="name"></li>
+                            <li id="num"></li>
+                            <li id="desig"></li>
+                            <li id="date"></li>
+                        </ul>
+
+                       
+                    </div>
+                </div>
+
+            </div>
+            <button id="down">Download</button>
+            
+        </div>
+
+
+        <script src="main.js" async defer></script>
+    </body>
+</html>
